@@ -2,15 +2,14 @@ group 'com.piccmaq.disk_space_plus'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.7.20'
+    ext.kotlin_version = '1.8.22'
     repositories {
         google()
-        // jcenter()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath 'com.android.tools.build:gradle:8.7.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -18,7 +17,6 @@ buildscript {
 rootProject.allprojects {
     repositories {
         google()
-        // jcenter()
         mavenCentral()
     }
 }
@@ -32,7 +30,7 @@ def safeExtGet(prop, fallback) {
 android {
     namespace 'com.piccmaq.disk_space_plus'
 
-    compileSdkVersion safeExtGet('compileSdkVersion', 34)
+    compileSdkVersion safeExtGet('compileSdkVersion', 35)
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
